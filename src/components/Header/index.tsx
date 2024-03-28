@@ -14,7 +14,7 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   return (
-    <div className="w-full px-8 flex items-center justify-between bg-opacity-80 z-10 py-4 bg-black text-slate-300 border-b border-slate-700">
+    <div className="w-full px-8 flex items-center justify-between bg-opacity-80 z-50 py-4 bg-black text-slate-300 border-b border-slate-700">
       <div className="flex justify-center items-center">
         <Image
           src="/android-chrome-192x192.png"

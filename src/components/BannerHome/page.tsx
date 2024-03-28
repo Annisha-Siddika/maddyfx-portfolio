@@ -50,8 +50,8 @@ const Banner = () => {
 
 
   return (
-    <div ref={heroSectionRef} className="relative h-[90vh] border-b-2 border-orange-500 px-8" style={{ perspective: "1000px" }}>
-      <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/homeBanner.jpg')" }}></div>
+    <div ref={heroSectionRef} className="relative h-[90vh] border-b border-slate-500  px-8" style={{ perspective: "1000px" }}>
+      <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/homeBanner.png')" }}></div>
       <div className="relative z-10 flex">
         <div className="flex flex-col justify-start w-full pt-28">
         <h2 className="text-2xl pt-20 md:pt-0 pb-4">
@@ -87,8 +87,8 @@ const Banner = () => {
           ref={imageRef}
         >
           <div className="border-4 rounded-3xl border-orange-500 bg-black bg-opacity-75 mt-20  overflow-hidden">
-            <div className="w-64 h-64 md:w-96 md:h-96 ">
-              <Image className="object-contain w-full h-full" src="/images/maddy.png" alt="Hero Image" width={350} height={350} />
+            <div className="w-64 h-64 ">
+              <Image className="object-contain w-full h-full" src="/images/maddy.png" alt="Hero Image" width={200} height={200} />
             </div>
           </div>
         </div>
