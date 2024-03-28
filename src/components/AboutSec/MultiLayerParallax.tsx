@@ -10,7 +10,6 @@ export default function MultiLayerParallax() {
   });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
-  const sunX = useTransform(scrollXProgress, [0, 1], ["0%", "200%"])
 
   return (
     <div
@@ -27,7 +26,8 @@ export default function MultiLayerParallax() {
       <motion.div
         className="absolute inset-0 z-0"
         style={{
-          backgroundColor:"#050222",
+          // backgroundColor:"#050222",
+          backgroundImage: `url(/images/sky.png)`,
           backgroundPosition: "bottom",
           opacity:'30',
           backgroundSize: "cover",

@@ -51,7 +51,7 @@ const Banner = () => {
 
   return (
     <div ref={heroSectionRef} className="relative h-[90vh] border-b border-slate-500  px-8" style={{ perspective: "1000px" }}>
-      <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/homeBanner.png')" }}></div>
+      <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/homeBanner.png')" }} ></div>
       <div className="relative z-10 flex">
         <div className="flex flex-col justify-start w-full pt-28">
         <h2 className="text-2xl pt-20 md:pt-0 pb-4">

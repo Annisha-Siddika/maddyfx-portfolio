@@ -11,7 +11,7 @@ export default function AboutSection() {
   return (
     <main className={inter.className}>
       <MultiLayerParallax />
-      <div className="w-full bg-[#050222]">
+      <div className="w-full bg-[#000940]">
         <motion.div
         initial={{y: -10}}
         whileInView={{y: 0}}
