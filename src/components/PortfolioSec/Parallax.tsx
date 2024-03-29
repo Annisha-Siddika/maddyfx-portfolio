@@ -1,7 +1,7 @@
 "use client"
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
-const PortfolioSection = () => {
+const ParallaxSection = () => {
   const ref = useRef(null);
   const { scrollYProgress, scrollXProgress } = useScroll({
     target: ref,
@@ -53,4 +53,4 @@ const PortfolioSection = () => {
   );
 };
 
-export default PortfolioSection;
+export default ParallaxSection;
