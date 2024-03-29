@@ -20,7 +20,7 @@ export default function MultiLayerParallax() {
         style={{ y: textY }}
         className="font-bold text-white text-5xl md:text-7xl relative -top-16 z-30"
       >
-        About Me
+        Who I am
       </motion.h1>
       
       <motion.div
