@@ -30,3 +30,19 @@
         }
     }
 }
+.service{
+    position: relative;
+    .progress{
+        position: sticky;
+        top: 65px;
+        left: 0;
+        text-align: center;
+        color: #fff;
+        .progressBar{
+            height: 10px;
+            background-color: #dd7b0a;
+            border-radius: 20px;
+
+        }
+    }
+}

@@ -49,7 +49,7 @@ export default function PortfolioSection() {
   })
 
   return (
-    <div>
+    <div id="portfolio">
       <ParallaxSection />
       <div className="portfolio pb-6" ref={ref}>
         <div className="progress">

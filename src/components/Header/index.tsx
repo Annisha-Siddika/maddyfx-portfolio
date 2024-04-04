@@ -1,20 +1,26 @@
 "use client";
+import { motion } from 'framer-motion'
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaRegPaperPlane } from "react-icons/fa";
 
 const navLinks = [
-  { name: "Home", href: "/home" },
-  { name: "About", href: "/about" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Service", href: "/service" },
-  { name: "Testimonials", href: "/testimonials" },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Service", href: "#service" },
+  { name: "Testimonials", href: "#testimonials" },
 ];
 export default function Header() {
   const pathname = usePathname();
   return (
-    <div className="w-full px-8 flex items-center justify-between bg-opacity-80 z-50 py-4 bg-black text-slate-300 border-b border-slate-700">
+    <motion.div
+    initial={{y: -100, opacity: 0}}
+    animate={{y: 0, opacity: 1}}
+    
+    className="w-full px-8 flex items-center justify-between bg-opacity-80 z-[999] relative py-4 bg-black shadow-lg shadow-white/[0.03] backdrop-blur-[0.5rem]  text-slate-300 border-b border-slate-700">
+      {/* logo */}
       <div className="flex justify-center items-center">
         <Image
           src="/android-chrome-192x192.png"
@@ -27,6 +33,7 @@ export default function Header() {
           <Link href="/">MaddyFX</Link>
         </div>
       </div>
+      {/* menu */}
       <div className="flex items-center justify-evenly gap-6">
       {navLinks.map((link) => {
         const isActive = pathname.startsWith(link.href);
@@ -45,11 +52,12 @@ export default function Header() {
         );
       })}
       </div>
+      {/* contact btn */}
       <div className="orangeBtn">
         <Link href="/contact">
           <p className="flex items-center gap-2"><span>Let&apos;s talk</span> <FaRegPaperPlane /></p>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
