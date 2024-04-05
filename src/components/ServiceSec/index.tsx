@@ -1,12 +1,18 @@
 "use client";
+import { useActiveSectionContext } from "@/contex/active-section-context";
 import ParallaxService from "./ParallaxService";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function ServiceSection(){
-    const ref = useRef<HTMLDivElement>(null);
+  const {ref} = useSectionInView('Service', 0.25);
+
+
+    const serviceRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
-      target: ref,
+      target: serviceRef,
       offset: ["end end", "start start"],
     });
     const scaleX = useSpring(scrollYProgress, {
@@ -14,9 +20,9 @@ export default function ServiceSection(){
       damping: 30,
     })
     return(
-        <div id="service">
+        <div id="service"  ref={ref}>
             <ParallaxService/>
-            <div className="service h-screen bg-[#360E06]" ref={ref}>
+            <div className="service h-screen bg-[#360E06]" ref={serviceRef}>
             <div className="progress">
           <h1 className=" pb-2 text-2xl font-bold">My Services</h1>
           <motion.div style={{scaleX}} className="progressBar"></motion.div>

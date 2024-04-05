@@ -2,18 +2,13 @@
 import { motion } from 'framer-motion'
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { FaRegPaperPlane } from "react-icons/fa";
+import { navLinks } from '@/lib/data';
+import clsx from 'clsx';
+import { useActiveSectionContext } from '@/contex/active-section-context';
 
-const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Service", href: "#service" },
-  { name: "Testimonials", href: "#testimonials" },
-];
 export default function Header() {
-  const pathname = usePathname();
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <motion.div
     initial={{y: -100, opacity: 0}}
@@ -21,7 +16,7 @@ export default function Header() {
     
     className="w-full px-8 flex items-center justify-between bg-opacity-80 z-[999] relative py-4 bg-black shadow-lg shadow-white/[0.03] backdrop-blur-[0.5rem]  text-slate-300 border-b border-slate-700">
       {/* logo */}
-      <div className="flex justify-center items-center">
+      <div className="sm:hidden md:flex justify-center items-center">
         <Image
           src="/android-chrome-192x192.png"
           alt="Logo"
@@ -33,25 +28,31 @@ export default function Header() {
           <Link href="/">MaddyFX</Link>
         </div>
       </div>
+
       {/* menu */}
-      <div className="flex items-center justify-evenly gap-6">
-      {navLinks.map((link) => {
-        const isActive = pathname.startsWith(link.href);
-        return (
-          <Link
-            href={link.href}
-            key={link.name}
-            className={
-              isActive
-                ? "transform transition-transform duration-500 ease-in-out hover:scale-110 text-orange-400 font-semibold"
-                : "transform transition-transform duration-500 ease-in-out hover:scale-110"
-            }
-          >
-            {link.name}
-          </Link>
-        );
-      })}
-      </div>
+      <nav>
+        <ul className="flex items-center justify-evenly gap-6">
+          {
+            navLinks.map(link => (
+              <motion.li key={link.hash}
+              initial={{y: -100, opacity: 0}}
+              animate={{y: 0, opacity: 1}}
+              >
+                <Link className={
+              clsx("transform transition-transform duration-500 ease-in-out hover:scale-110", {"transform transition-transform duration-500 ease-in-out hover:scale-110 text-orange-400 font-semibold" : activeSection === link.name})} 
+              href={link.hash}
+              onClick={()=>{
+                setTimeOfLastClick(Date.now())
+                setActiveSection(link.name)}}
+              >
+                {link.name}
+                </Link>
+              </motion.li>
+            ))
+          }
+        </ul>
+      </nav>
+
       {/* contact btn */}
       <div className="orangeBtn">
         <Link href="/contact">

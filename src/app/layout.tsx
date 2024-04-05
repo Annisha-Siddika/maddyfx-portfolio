@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ActiveSectionContextProvider from "@/contex/active-section-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body className={inter.className}>
-        <header className="fixed top-0 left-0 w-full z-40">
+        <ActiveSectionContextProvider>
+          <header className="fixed top-0 left-0 w-full z-40">
           <Header/>
         </header>
         <div className="min-h-screen bg-slate-950 w-full  text-slate-300 ">
@@ -33,6 +35,7 @@ export default function RootLayout({
         <footer>
           <Footer/>
         </footer>
+        </ActiveSectionContextProvider>
         </body>
     </html>
   );

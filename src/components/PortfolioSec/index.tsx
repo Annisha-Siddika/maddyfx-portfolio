@@ -1,8 +1,11 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import ParallaxSection from "./Parallax";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/contex/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 const items = [
   {
@@ -38,23 +41,16 @@ const items = [
 ];
 
 export default function PortfolioSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
-  });
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness:100,
-    damping: 30,
-  })
+  const {ref} = useSectionInView('Portfolio', 0.25);
+
 
   return (
-    <div id="portfolio">
+    <div id="portfolio" ref={ref}>
       <ParallaxSection />
-      <div className="portfolio pb-6" ref={ref}>
+      <div className="portfolio pb-6">
         <div className="progress">
           <h1 className=" pb-2 text-2xl font-bold">My Portfolios</h1>
-          <motion.div style={{scaleX}} className="progressBar"></motion.div>
+          <motion.div className="progressBar"></motion.div>
         </div>
         {items.map((item) => (
           <Single item={item} key={item.id} />
@@ -64,15 +60,15 @@ export default function PortfolioSection() {
   );
 }
 const Single = ({ item }: any ) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const reff = useRef<HTMLDivElement>(null);
 
   const {scrollYProgress} = useScroll({
-    target: ref,
+    target: reff,
   });
 
   const y = useTransform(scrollYProgress, [0,1], [-300, 300])
 
-  return <div ref={ref}>
+  return <div ref={reff}>
     <div className="flex items-center justify-center w-full h-full">
       <div className="max-w-5xl h-full m-auto flex items-center justify-center px-8 gap-12">
       <div className="flex-1 h-1/2 pt-6">
