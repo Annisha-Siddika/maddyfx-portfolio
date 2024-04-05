@@ -1,9 +1,7 @@
 "use client";
-import { useActiveSectionContext } from "@/contex/active-section-context";
 import ParallaxService from "./ParallaxService";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion, useScroll, useSpring,  } from "framer-motion";
+import { useRef } from "react";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function ServiceSection(){

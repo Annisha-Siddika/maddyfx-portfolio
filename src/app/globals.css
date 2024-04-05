@@ -12,37 +12,3 @@
 .ghostBtn{
     @apply border-2 border-orange-500 text-orange-400 py-1 rounded-xl transform transition-transform duration-500 ease-in-out hover:scale-110 hover:bg-white hover:bg-opacity-10 px-4 cursor-pointer
 }
-
-.portfolio{
-    position: relative;
-    background-color: #2B2338;
-    .progress{
-        position: sticky;
-        top: 65px;
-        left: 0;
-        text-align: center;
-        color: #dd7b0a;
-        .progressBar{
-            height: 10px;
-            background-color: #fff;
-            border-radius: 20px;
-
-        }
-    }
-}
-.service{
-    position: relative;
-    .progress{
-        position: sticky;
-        top: 65px;
-        left: 0;
-        text-align: center;
-        color: #fff;
-        .progressBar{
-            height: 10px;
-            background-color: #dd7b0a;
-            border-radius: 20px;
-
-        }
-    }
-}
