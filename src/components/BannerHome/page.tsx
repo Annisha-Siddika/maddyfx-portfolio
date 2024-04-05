@@ -5,12 +5,21 @@ import { TypeAnimation } from 'react-type-animation';
 import { FaArrowRight } from "react-icons/fa6";
 import { RiDownload2Line } from "react-icons/ri";
 import { useSectionInView } from "@/lib/hooks";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Script from "next/script";
 
 const Banner = () => {
   const heroSectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const {ref} = useSectionInView('Home', 0.25);
+
+
+  const {scrollYProgress} = useScroll({
+    target: heroSectionRef,
+    offset: ['start start', 'end start']
+  })
+  const yBg = useTransform(scrollYProgress, [0,1], ['0%', '50%'])
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -52,21 +61,24 @@ const Banner = () => {
 
 
   return (
-    <div id="home" ref={ref} className="relative h-[90vh] border-b border-slate-500  px-8" style={{ perspective: "1000px" }}>
-      <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/homeBanner.png')" }} ></div>
-      <div className="relative z-10 flex" ref={heroSectionRef}>
+    <div id="home" ref={ref} className="relative md:h-[90vh] overflow-hidden px-8" style={{ perspective: "1000px" }}>
+      
+      <div className="absolute inset-0 bg-cover bg-center -z-10 bg-[#011231] overflow-hidden" style={{ backgroundImage: "url('/images/homeBanner.png')"}}>
+      </div>
+
+      <div className="relative z-10  md:flex" ref={heroSectionRef}>
         <div className="flex flex-col justify-start w-full pt-28">
         <h2 className="text-2xl pt-20 md:pt-0 pb-4">
-          Hi, This is <span className="text-orange-400">MADDY</span>
+          Hi, This is <span className="text-orange-400">MADDY Fx</span>
         </h2>
         <p className="pb-4 text-slate-300 "> I am a Profesional ______________</p>
         <TypeAnimation
       sequence={[
-        'Frontend Developer',
+        'Graphics Designer',
         2000, 
-        'MERN Developer',
+        'Adobe Illustrator',
         2000,
-        'Coding enthusiast',
+        'POD Expert',
         2000
       ]}
       wrapper="span"
@@ -74,10 +86,10 @@ const Banner = () => {
       className="bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-4xl "
       repeat={Infinity}
     />
-    <p className="w-1/2 text-sm pt-4 text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ad repellendus dolore eum quam corrupti maxime similique quidem ipsam eaque ratione beatae harum non accusantium?</p>
+    <p className="w-1/2 text-sm pt-4 text-slate-500"> I am a Graphics Designer and Print On Demand Expert. I am working with several Amazon Brands and Individual Buyers as there complete Graphic and Amazon Solution. My aim is to provide top quality Service on time and in budget with Satisfaction. Please contact me to discuss More.</p>
     <div className="flex item-center gap-6 pt-8">
         <div className="dwnldBtn flex items-center gap-2"><RiDownload2Line className="text-xl" /> <span>Download CV</span> </div>
-        <div className="ghostBtn flex items-center gap-2"><span>Hire Me</span> <FaArrowRight /></div>
+        <div className="ghostBtn flex items-center gap-2"><span>Contact Me</span> <FaArrowRight /></div>
     </div>
         </div>
         <div

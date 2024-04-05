@@ -77,7 +77,7 @@ const Footer = () => {
           <div className="flex items-center mt-6">
           <input
             type="text"
-            className=" rounded-s px-2 py-1 text-sm outline-0"
+            className=" rounded-s px-2 py-1 text-sm outline-0 w-1/2 sm:w-full"
             placeholder="Search..."
           />
           <button className="bg-[#d47c2f] hover:bg-[#be5e09] text-white px-2 py-1 text-sm rounded-e font-semibold">

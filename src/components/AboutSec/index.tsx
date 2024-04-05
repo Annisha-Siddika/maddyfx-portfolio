@@ -20,7 +20,7 @@ export default function AboutSection() {
       <div className="service h-screen bg-[#000940]">
         <div
 
-        className="progress px-40 space-y-4 py-8">
+        className="progress md:px-40 space-y-4 py-8">
           <h1 className=" pb-2 text-2xl font-bold">About Me</h1>
           <div className="progressBar"></div>
             <p>

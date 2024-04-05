@@ -9,7 +9,7 @@ export default function MultiLayerParallax() {
     offset: ["start start", "end start"],
   });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
 
   return (
     <div
@@ -18,9 +18,11 @@ export default function MultiLayerParallax() {
     >
        <motion.div
         className="absolute inset-0 -z-0"
+        initial={{y: 50}}
+        animate={{ y:0}}
         style={{
           // backgroundColor:"#050222",
-          backgroundImage: `url(/images/sky.png)`,
+          backgroundImage: `url(/images/6.jpeg)`,
           backgroundPosition: "bottom",
           opacity:'30',
           backgroundSize: "cover",

@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body className={inter.className}>
         <ActiveSectionContextProvider>
-          <header className="fixed top-0 left-0 w-full z-40">
+          <header className="fixed top-0 w-full left-0 z-40">
           <Header/>
         </header>
         <div className="min-h-screen bg-slate-950 w-full  text-slate-300 ">
