@@ -67,3 +67,57 @@ export const banners =
     { url: "/images/banners/7.png", alt: "banner image", id: 7 },
     { url: "/images/banners/8.png", alt: "banner image", id: 8 },
   ] as const;
+
+export const services = 
+[
+  {
+    title: "Socks Design",
+    description: "I do unique knitting or sublimation socks design ",
+    image: "/images/socks/5.png"
+  },
+  {
+    title: "Cap or Hat Design",
+    description: "I illustrated unique cap or hat designs with mockup",
+    image: "/images/caps/5.png"
+  },
+  {
+    title: "T-shirt Design",
+    description: "I do unique graphic tshirt design illustration and mockup",
+    image: "/images/tshirts/6.png"
+  },
+  {
+    title: "Brand Logo Design",
+    description: "I design modern professional brand logo for company and business",
+    image: "/images/logos/1.png"
+  },
+  {
+    title: "Recreate Logo and Image",
+    description: "I recreate vector, redraw or trace your logo and images",
+    image: "/images/logos/3.png"
+  },
+  {
+    title: "Seamless Pattern",
+    description: "I do unique seamless pattern floral textile repeat pattern",
+    image: "/images/service_6.png"
+  },
+  {
+    title: "Tag Design",
+    description: "I design price tag, clothing label, hang tag, brand tag",
+    image: "/images/service_7.png"
+  },
+  {
+    title: "Banner Design",
+    description: "I create youtube thumbnail, website banner, social media post",
+    image: "/images/banners/4.png"
+  },
+  {
+    title: "Line Illustration",
+    description: "I create technical line art drawing line illustration",
+    image: "/images/service_9.png"
+  },
+  {
+    title: "Amazon Storefront",
+    description: "I create professional amazon storefront and banner graphics",
+    image: "/images/banners/8.png"
+  }
+] as const;
