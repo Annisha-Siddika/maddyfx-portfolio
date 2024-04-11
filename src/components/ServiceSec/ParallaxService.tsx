@@ -8,24 +8,24 @@ const ParallaxService = () => {
     offset: ["start start", "end start"],
   });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
   return (
     <div
     ref={ref}
-    className="w-full h-screen overflow-hidden relative grid place-items-center"
+    className="w-full h-[1080px] overflow-hidden relative grid place-items-center"
   >
     <motion.h1
       style={{ y: textY }}
-      className="font-bold text-white text-5xl md:text-7xl relative -top-10 left-8 z-20"
+      className="font-bold text-white text-5xl md:text-7xl relative -top-10 2xl:top-10 left-8 z-20"
     >
-      How I Provide
+      What I Provide
     </motion.h1>
     
     <motion.div
       className="absolute inset-0 z-0"
       style={{
         // backgroundColor:"#050222",
-        backgroundImage: `url(/images/forest.jpg)`,
+        backgroundImage: `url(/images/sky2.png)`,
         backgroundPosition: "bottom",
         opacity:'30',
         backgroundSize: "cover",
