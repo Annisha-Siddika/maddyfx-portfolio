@@ -22,7 +22,7 @@ export default function MultiLayerParallax() {
         animate={{ y:0}}
         style={{
           // backgroundColor:"#050222",
-          backgroundImage: `url(/images/6.jpeg)`,
+          backgroundImage: `url(/images/sky.jpeg)`,
           backgroundPosition: "bottom",
           opacity:'30',
           backgroundSize: "cover",

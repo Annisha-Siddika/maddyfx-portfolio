@@ -1,52 +1,40 @@
 "use client";
-import { useRef } from "react";
 import ParallaxSection from "./Parallax";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import { useSectionInView } from "@/lib/hooks";
-
-// const items = [
-//   {
-//     id: 1,
-//     title: "Ecommerce website",
-//     img: "/images/project1.png",
-//     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tenetur quos id asperiores, vitae unde libero quas amet ipsam est, veniam expedita pariatur iusto? Rem ab voluptatem assumenda quibusdam voluptatum.",
-//   },
-//   {
-//     id: 2,
-//     title: "Booking website",
-//     img: "/images/project2.png",
-//     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tenetur quos id asperiores, vitae unde libero quas amet ipsam est, veniam expedita pariatur iusto? Rem ab voluptatem assumenda quibusdam voluptatum.",
-//   },
-//   {
-//     id: 3,
-//     title: "Blog website",
-//     img: "/images/project3.png",
-//     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tenetur quos id asperiores, vitae unde libero quas amet ipsam est, veniam expedita pariatur iusto? Rem ab voluptatem assumenda quibusdam voluptatum.",
-//   },
-//   {
-//     id: 4,
-//     title: "Rastuarent website",
-//     img: "/images/project4.png",
-//     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tenetur quos id asperiores, vitae unde libero quas amet ipsam est, veniam expedita pariatur iusto? Rem ab voluptatem assumenda quibusdam voluptatum.",
-//   },
-//   {
-//     id: 5,
-//     title: "Portfolio website",
-//     img: "/images/project5.png",
-//     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tenetur quos id asperiores, vitae unde libero quas amet ipsam est, veniam expedita pariatur iusto? Rem ab voluptatem assumenda quibusdam voluptatum.",
-//   },
-// ];
+import CapsImg from "./CapsImg";
+import SocksImg from "./SocksImg";
+import TshirtImg from "./TshirtImg";
+import LogoImg from "./LogoImg";
+import BannerImg from "./BannerImg";
 
 export default function PortfolioSection() {
-  const {ref} = useSectionInView('Portfolio', 0.25);
-
-
+  const { ref } = useSectionInView("Portfolio", 0.25);
   return (
     <div id="portfolio" ref={ref}>
       <ParallaxSection />
-      <div className="min-h-screen bg-[#2B2338]"></div>
-    
+      <div className=" px-12 bg-[#2B2338]">
+        <div className="relative">
+          <motion.h2  className="sticky top-20 2xl:top-28 bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-2xl xl:text-4xl 2xl:text-6xl">Socks Designs</motion.h2>
+          <SocksImg />
+        </div>
+        <div className="relative">
+          <motion.h2  className="sticky top-20 2xl:top-28 bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-2xl xl:text-4xl 2xl:text-6xl">Cap Designs</motion.h2>
+          <CapsImg />
+        </div>
+        <div className="relative">
+          <motion.h2  className="sticky top-20 2xl:top-28 bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-2xl xl:text-4xl 2xl:text-6xl">Appealing T-shirt Designs</motion.h2>
+          <TshirtImg />
+        </div>
+        <div className="relative">
+          <motion.h2  className="sticky top-20 2xl:top-28 bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-2xl xl:text-4xl 2xl:text-6xl">Logo Designs</motion.h2>
+          <LogoImg />
+        </div>
+        <div className="relative">
+          <motion.h2  className="sticky top-20 2xl:top-28 bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-2xl xl:text-4xl 2xl:text-6xl">Banner Designs</motion.h2>
+          <BannerImg />
+        </div>
+      </div>
     </div>
-    )
-  }
+  );
+}
