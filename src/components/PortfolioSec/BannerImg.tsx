@@ -18,12 +18,12 @@ export default function BannerImg() {
     className="relative h-[250vh]"
   >
     <div className="sticky top-16 flex h-screen items-center overflow-hidden">
-      <motion.div style={{ x }} className="flex gap-4">
+      <motion.div style={{ x }} className="flex gap-12">
         {banners.map((banner) => {
           return (
             <div
 key={banner.id}
-className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200 rounded-lg border-4 border-orange-600"
 >
 <div
   style={{
