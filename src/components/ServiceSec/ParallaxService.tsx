@@ -12,7 +12,7 @@ const ParallaxService = () => {
   return (
     <div
     ref={ref}
-    className="w-full h-[1080px] overflow-hidden relative grid place-items-center"
+    className="w-full h-screen overflow-hidden relative grid place-items-center"
   >
     <motion.h1
       style={{ y: textY }}

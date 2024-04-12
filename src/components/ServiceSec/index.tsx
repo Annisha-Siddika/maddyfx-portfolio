@@ -1,7 +1,6 @@
 "use client";
 import ParallaxService from "./ParallaxService";
-import { motion, useScroll, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { motion, } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { services } from "@/lib/data";
 import Image from "next/image";
@@ -9,15 +8,7 @@ import Image from "next/image";
 export default function ServiceSection() {
   const { ref } = useSectionInView("Service", 0.25);
 
-  const serviceRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: serviceRef,
-    offset: ["end end", "start start"],
-  });
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-  });
+  
   return (
     <div id="service" ref={ref}>
       <ParallaxService />

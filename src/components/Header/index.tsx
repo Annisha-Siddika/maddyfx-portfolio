@@ -22,7 +22,7 @@ export default function Header() {
           alt="Logo"
           width={30}
           height={30}
-          className='2xl:w-[50px]'
+          className='2xl:w-[50px] 2xl:h-[50px]'
         />
         <div className="text-xl 2xl:text-2xl w-20 hidden md:block text-[#f2994a]">
           {" "}

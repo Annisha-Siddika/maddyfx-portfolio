@@ -91,7 +91,7 @@ const Footer = () => {
         <Image
           src="/favicon-32x32.png"
           alt="Feather Image"
-          width={40}
+          width={60}
           height={60}
         />
         <div>

@@ -34,7 +34,6 @@ const ParallaxTestimonial = () => {
         backgroundImage: `url(/images/bg1.png)`,
         backgroundPosition: "bottom",
         backgroundSize: "cover",
-        y: backgroundY,
       }}
     />
     

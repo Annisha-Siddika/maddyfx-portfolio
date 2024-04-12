@@ -121,3 +121,26 @@ export const services =
     image: "/images/banners/8.png"
   }
 ] as const;
+
+export const reviews = [
+  {
+      client: "sarah_campbell4",
+      rating: 5,
+      review: "This is my second time working with Maddy. Creative designs, quick responses, easy to work with regarding my vision. I will definitely be working with Maddy again in the future. Can't say enough great things!"
+  },
+  {
+      client: "joecasablanca",
+      rating: 5,
+      review: "Great design creation. He’s got talent in delivering unique outcome. Im working with him on several designs. He also quickly understands what needs to be done in iteration process. Definitely recommend."
+  },
+  {
+      client: "squishymtb",
+      rating: 4.7,
+      review: "Maddyfx was great to work with, paid attention to all the details of the request and was fast to delivery"
+  },
+  {
+      client: "barjacks",
+      rating: 5,
+      review: "Really happy with the work. He worked with us until we had exactly what we wanted! Exceptional designer!"
+  }
+] as const;
