@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import ActiveSectionContextProvider from "@/contex/active-section-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,17 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body className={inter.className}>
-        <ActiveSectionContextProvider>
-          <header className="fixed top-0 w-full left-0 z-40">
-          <Header/>
-        </header>
-        <div className="min-h-screen bg-slate-950 w-full  text-slate-300 ">
+      <div className="min-h-screen bg-slate-950 w-full  text-slate-300 ">
           {children}
         </div>
-        <footer>
-          <Footer/>
-        </footer>
-        </ActiveSectionContextProvider>
         </body>
     </html>
   );
