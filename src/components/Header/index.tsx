@@ -24,7 +24,7 @@ export default function Header() {
           height={30}
           className='2xl:w-[50px] 2xl:h-[50px]'
         />
-        <div className="text-xl 2xl:text-2xl w-20 hidden md:block text-[#f2994a]">
+        <div className="text-xl 2xl:text-3xl w-20 hidden md:block text-[#f2994a]">
           {" "}
           <Link href="/">MaddyFX</Link>
         </div>
@@ -40,7 +40,7 @@ export default function Header() {
               animate={{y: 0, opacity: 1}}
               >
                 <Link className={
-              clsx("transform transition-transform duration-500 ease-in-out hover:scale-110 text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-xl", {"text-orange-400 font-semibold" : activeSection === link.name})} 
+              clsx("transform transition-transform duration-500 ease-in-out hover:scale-110 text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-2xl", {"text-orange-400 font-semibold" : activeSection === link.name})} 
               href={link.hash}
               onClick={()=>{
                 setTimeOfLastClick(Date.now())
@@ -57,7 +57,7 @@ export default function Header() {
       {/* contact btn */}
       <div className="orangeBtn">
         <Link href="/contact">
-          <p className="flex items-center justify-center gap-2 text-lg"><span>Let&apos;s talk</span> <FaRegPaperPlane /></p>
+          <p className="flex items-center justify-center gap-2 text-lg 2xl:text-2xl"><span>Let&apos;s talk</span> <FaRegPaperPlane /></p>
         </Link>
       </div>
     </motion.div>

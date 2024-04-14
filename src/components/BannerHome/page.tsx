@@ -72,7 +72,7 @@ const Banner = () => {
       ></div>
 
       <div
-        className="relative z-10 flex-row xl:flex items-center justify-center pt-40 md:pt-28 2xl:pt-40"
+        className="relative z-10 flex-row xl:flex items-center justify-center pt-40 md:pt-28 2xl:pt-52"
         ref={heroSectionRef}
       >
         <div className="text-center xl:text-start w-full">
@@ -97,7 +97,7 @@ const Banner = () => {
             className="bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-2xl xl:text-4xl 2xl:text-6xl"
             repeat={Infinity}
           />
-          <p className="w-full text-center xl:text-start xl:w-2/3 text-sm 2xl:text-xl pt-4 2xl:pt-8 text-slate-500">
+          <p className="w-full text-center xl:text-start xl:w-2/3 2xl:w-3/4 text-sm 2xl:text-2xl pt-4 2xl:pt-8 text-slate-500">
             {" "}
             I am a Graphics Designer and Print On Demand Expert. I am working
             with several Amazon Brands and Individual Buyers as there complete
@@ -106,10 +106,10 @@ const Banner = () => {
             to discuss More.
           </p>
           <div className="flex item-center justify-center xl:justify-start gap-6 pt-8 2xl:pt-12">
-            <div className="dwnldBtn flex items-center gap-2">
-              <RiDownload2Line className="text-xl" /> <span>Download CV</span>{" "}
+            <div className="dwnldBtn flex items-center gap-2 2xl:gap-4 2xl:text-2xl">
+              <RiDownload2Line className="text-xl 2xl:text-3xl" /> <span>Download CV</span>{" "}
             </div>
-            <div className="ghostBtn flex items-center gap-2">
+            <div className="ghostBtn flex items-center gap-2 2xl:gap-4 2xl:text-2xl">
               <span>Contact Me</span> <FaArrowRight />
             </div>
           </div>
@@ -135,7 +135,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-3/4 md:w-1/2 bg-white bg-opacity-30 border-t-4 border-orange-500 pl-4 h-20 rounded-se-full pr-12">
+      <div className="absolute bottom-0 left-0 w-3/4 md:w-1/2 bg-white bg-opacity-30 border-t-4 border-orange-500 pl-4 h-20 2xl:h-28 rounded-se-full pr-12">
         <Brands />
       </div>
     </div>
