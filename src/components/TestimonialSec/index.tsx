@@ -6,7 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 import { reviews } from "@/lib/data";
 import { Rating } from "@smastrom/react-rating";
-
+import { motion } from "framer-motion";
 import "@smastrom/react-rating/style.css";
 
 import "swiper/css";
@@ -20,10 +20,14 @@ export default function TestimonialSection() {
   const { ref } = useSectionInView("Testimonials", 0.5);
 
   return (
-    <div className="min-h-screen" id="testimonials" ref={ref}>
+    <div className="" id="testimonials" ref={ref}>
       <ParallaxTestimonial />
-      <div className="bg-[#000721] h-screen overflow-hidden grid place-items-center">
-      <h2 className="text-center font-bold text-2xl xl:text-4xl 2xl:text-6xl">Testimonials</h2>
+      <div className="bg-[#000721] h-screen overflow-hidden flex flex-col justify-center items-center gap-8 lg:gap-32">
+      <motion.h2
+      initial={{y: 30, }}
+      whileInView={{y: 0, }}
+      transition={{duration: 1}}
+       className="text-center font-bold text-2xl xl:text-4xl 2xl:text-6xl ">Testimonials</motion.h2>
         <div
           className="w-2/3 h-96 bg-center bg-cover relative"
           style={{
