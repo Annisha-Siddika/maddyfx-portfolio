@@ -63,7 +63,7 @@ const Banner = () => {
     <div
       id="home"
       ref={ref}
-      className="relative h-full xl:h-[90vh] overflow-hidden px-4 sm:px-8 md:px-16 xl:px-20 2xl:px-40"
+      className="relative h-full lg:h-[90vh] overflow-hidden px-4 sm:px-8 md:px-16 lg:px-20 2xl:px-40"
       style={{ perspective: "1000px" }}
     >
       <div
@@ -72,11 +72,11 @@ const Banner = () => {
       ></div>
 
       <div
-        className="relative z-10 flex-row xl:flex items-center justify-center pt-40 md:pt-28 2xl:pt-52"
+        className="relative z-10 flex-row lg:flex items-center justify-center pt-40 md:pt-28 lg:pt-32 2xl:pt-52"
         ref={heroSectionRef}
       >
-        <div className="text-center xl:text-start w-full">
-          <h2 className="text-2xl xl:text-4xl 2xl:text-6xl pb-4">
+        <div className="text-center lg:text-start w-full">
+          <h2 className="text-2xl lg:text-4xl 2xl:text-6xl pb-4">
             Hi, This is <span className="text-orange-400">MADDY Fx</span>
           </h2>
           <p className="pb-4 text-slate-300 text-sm 2xl:text-xl">
@@ -94,10 +94,10 @@ const Banner = () => {
             ]}
             wrapper="span"
             speed={50}
-            className="bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-2xl xl:text-4xl 2xl:text-6xl"
+            className="bg-gradient-to-t from-blue-700 to-fuchsia-600 text-transparent bg-clip-text font-extrabold text-2xl lg:text-4xl 2xl:text-6xl"
             repeat={Infinity}
           />
-          <p className="w-full text-center xl:text-start xl:w-2/3 2xl:w-3/4 text-sm 2xl:text-2xl pt-4 2xl:pt-8 text-slate-500">
+          <p className="w-full text-center lg:text-start lg:w-2/3 2xl:w-3/4 text-sm 2xl:text-2xl pt-4 2xl:pt-8 text-slate-500">
             {" "}
             I am a Graphics Designer and Print On Demand Expert. I am working
             with several Amazon Brands and Individual Buyers as there complete
@@ -105,7 +105,7 @@ const Banner = () => {
             Service on time and in budget with Satisfaction. Please contact me
             to discuss More.
           </p>
-          <div className="flex item-center justify-center xl:justify-start gap-6 pt-8 2xl:pt-12">
+          <div className="flex item-center justify-center lg:justify-start gap-6 pt-8 2xl:pt-12">
             <div className="dwnldBtn flex items-center gap-2 2xl:gap-4 2xl:text-2xl">
               <RiDownload2Line className="text-xl 2xl:text-3xl" /> <span>Download CV</span>{" "}
             </div>
@@ -115,7 +115,7 @@ const Banner = () => {
           </div>
         </div>
         <div
-          className="w-full pt-12 pb-28 xl:pt-0 xl:pb-0 xl:w-1/2 flex justify-center items-center"
+          className="w-full pt-12 pb-28 lg:pt-0 lg:pb-0 lg:w-1/2 flex justify-center items-center"
           style={{
             transform: `rotateX(${mousePosition.y}deg) rotateY(${mousePosition.x}deg)`,
             transition: "transform 0.1s ease-out",
@@ -135,7 +135,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-3/4 md:w-1/2 bg-white bg-opacity-30 border-t-4 border-orange-500 pl-4 h-20 2xl:h-28 rounded-se-full pr-12">
+      <div className="absolute bottom-0 left-0 w-3/4 md:w-1/2 bg-white bg-opacity-30 border-t-4 border-orange-500 pl-4 h-16 2xl:h-28 rounded-se-full pr-12">
         <Brands />
       </div>
     </div>
