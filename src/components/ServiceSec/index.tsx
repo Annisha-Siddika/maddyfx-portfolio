@@ -13,23 +13,27 @@ export default function ServiceSection() {
     <div id="service" ref={ref}>
       <ParallaxService />
       <div className="bg-[#360E06]">
-      <h2 className="text-center font-bold text-2xl xl:text-4xl 2xl:text-6xl">My Services</h2>
-        <div className="flex flex-wrap justify-center px-16 py-8">
+      <motion.h2
+      initial={{y: 30, }}
+      whileInView={{y: 0, }}
+      transition={{duration: 1}}
+       className="text-center font-bold text-2xl xl:text-4xl 2xl:text-6xl md:py-6">My Services</motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:gap-6 w-full px-16 pt-8 pb-12">
           
           {services.map((service, index) => (
-            <div key={index} className="w-full md:w-1/2 xl:w-1/3 2xl:w-1/5 p-4">
-              <div className="bg-[#4f4d4c38]  rounded-lg shadow-lg">
+            <div key={index} className="w-full h-full p-4">
+              <div className="bg-[#4f4d4c38] h-full  rounded-lg shadow-lg hover:shadow-orange-900 hover:transition-shadow">
                 <motion.div
-                initial={{opacity: 0}}
-                whileInView={{opacity: 1}}
-                transition={{duration:3}} 
-                className="relative">
+                initial={{ scale: 0.9}}
+                whileInView={{ scale: 1}}
+                transition={{duration:1}} 
+                className="relative overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
                     width={800}
                     height={600}
-                    className="rounded-t-lg w-96 h-64"
+                    className="rounded-t-lg w-96 h-64 hover:scale-105 duration-500"
                   />
                 </motion.div>
                 <div className="p-4 ">

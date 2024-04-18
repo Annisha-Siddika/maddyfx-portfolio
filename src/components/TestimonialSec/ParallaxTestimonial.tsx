@@ -47,7 +47,7 @@ const ParallaxTestimonial = () => {
     />
     <motion.h1
       style={{ y: textY }}
-      className="font-bold text-white text-5xl md:text-7xl relative -top-28 2xl:-top-16 z-20"
+      className="font-bold text-white text-3xl md:text-5xl 2xl:text-7xl relative -top-28 2xl:-top-16 z-20"
     >
       What Clients Say
     </motion.h1>
