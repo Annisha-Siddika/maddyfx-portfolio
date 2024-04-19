@@ -16,7 +16,7 @@ export default function TshirtImg() {
   return (
     <div ref={targetRef} className="relative py-8">
     <div className="flex items-center justify-center overflow-hidden">
-      <div className="grid grid-cols-3  items-center place-items-center gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3  items-center place-items-center gap-4">
         {tshirts.map((tshirt) => {
           return (
             <motion.div

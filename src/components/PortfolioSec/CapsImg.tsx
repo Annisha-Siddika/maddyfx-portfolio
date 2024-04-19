@@ -16,7 +16,7 @@ export default function CapsImg() {
   return (
     <div ref={targetRef} className="relative py-8">
       <div className="flex items-center justify-start overflow-hidden">
-        <div className="grid grid-cols-3  items-center place-items-center gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3  items-center place-items-center gap-4">
           {caps.map((cap) => {
             return (
               <motion.div

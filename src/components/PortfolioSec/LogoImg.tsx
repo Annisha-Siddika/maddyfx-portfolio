@@ -17,7 +17,7 @@ export default function LogoImg() {
     ref={targetRef}
     className="relative py-8">
       <div className="flex items-center justify-end overflow-hidden">
-        <div className="grid grid-cols-3  items-center place-items-center gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3  items-center place-items-center gap-4">
           {logos.map((logo) => {
             return (
               <motion.div
