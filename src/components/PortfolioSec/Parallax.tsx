@@ -16,7 +16,7 @@ const ParallaxSection = () => {
   >
     <motion.h1
       style={{ y: textY }}
-      className="font-bold text-white text-3xl md:text-5xl 2xl:text-7xl relative -top-8 z-20"
+      className="font-bold text-white text-3xl md:text-5xl 2xl:text-7xl relative -top-8 2xl:top-10 z-20"
     >
       What I Did
     </motion.h1>

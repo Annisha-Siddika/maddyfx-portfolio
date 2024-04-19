@@ -29,7 +29,7 @@ export default function TestimonialSection() {
       transition={{duration: 1}}
        className="text-center font-bold text-2xl xl:text-4xl 2xl:text-6xl ">Testimonials</motion.h2>
         <div
-          className="w-2/3 h-96 bg-center bg-cover relative"
+          className="w-full lg:w-2/3 h-full lg:h-96 bg-center bg-cover relative"
           style={{
             backgroundImage: `url(/images/sky.jpeg)`,
             backgroundAttachment: "fixed",
